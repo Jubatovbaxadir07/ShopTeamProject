@@ -93,7 +93,15 @@ public class Showall {
             totalLabel.setText("Total: $" + String.format("%.2f", cart.getTotalPrice()));
         });
 
-        root.getChildren().addAll(textArea, totalLabel, buyButton);
+        Button clearButton = new Button("Clear");
+        clearButton.setOnAction(e -> {
+            textArea.clear();
+            cart.clearCart();
+        });
+        HBox twoButtons = new HBox(10);
+        twoButtons.getChildren().addAll(buyButton, clearButton);
+
+        root.getChildren().addAll(textArea, totalLabel, twoButtons);
 
         Scene scene = new Scene(root, 350, 400);
         cartStage.setScene(scene);
