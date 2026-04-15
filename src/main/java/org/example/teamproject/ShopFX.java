@@ -383,7 +383,7 @@ public class ShopFX extends Application {
         scrollPane.setFitToWidth(true);
         scrollPane.setStyle("-fx-background: transparent; -fx-background-color: transparent;");
 
-        Scene scene = new Scene(scrollPane, 900, 300);
+        Scene scene = new Scene(scrollPane, 1535.2, 791.2);
 
         stage.setScene(scene);
         stage.show();
